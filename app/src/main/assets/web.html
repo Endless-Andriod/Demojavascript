@@ -1,0 +1,28 @@
+<html>
+<style>
+    input{
+    height:35px;
+    width:300px;
+    }
+</style>
+<script>
+            function call(){
+                var content = document.getElementById("phone");
+                window.android.callphone(content.value);
+
+            }
+              function send(){
+                var phoneNumber = document.getElementById("phoneNumber");
+                var message = document.getElementById("message");
+                window.android.sendmsg(phoneNumber.value,message.value);
+
+            }
+    </script>
+<body>
+请输入拨打的号码：<input type="number" id="phone">
+<input type="button" value="拨打" onclick="call()"><br>
+请输入你要发送信息的号码：<input type="number" id="phoneNumber"><br>
+请输入要发送的内容：<input type="number" id="message"><br>
+<input type="button" value="发送" onclick="send()"><br>
+</body>
+</html>
